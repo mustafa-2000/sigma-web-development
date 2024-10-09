@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Images</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <img height="230" src="image.png" alt="Train image">
+    <br>
+    <table>
+        <caption>Employee Details</caption>      /* note1: this is table titale*/
+        <thead>                                  /*note2: this is table head, we have one table head column*/
+            <tr>                                 /* this first table row, and we have many column in one row */
+                <th>Name</th>                    /* column 1 */  /* table heading one */
+                <th>Designation</th>             /* column 2 */  /* table heading two */
+                <th>Fav Language</th>            /* column 3 */  /* table headig three*/
+            </tr>
+        </thead>
+        <tbody>           /* note3: we have many table body */
+
+
+            <tr>                           /* second row */
+                <td>Harry</td>            /* table data in colmn1*/
+                <td>Programmer</td>       /* table data in colmn1*/
+                <td>JavaScript</td>       /* table data in colmn1*/
+            </tr>
+
+            <tr>
+                <td colspan="2">Sam</td>    /*note4: colspan means two column add together and make on column*/
+                <td rowspan="2">Java</td>   /*note5: rowspan means tow row add together,  and make on row */
+            </tr>
+            <tr>
+                <td colspan="2">Sam</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="2">Sam</td>
+                <td rowspan="2">foot</td>
+            </tr>
+        </tfoot>
+    </table>
+
+
+    <ul type="square">    /* circle , square*/
+        <li>Harry</li>
+        <li>Rohan</li>
+        <li>Shubham</li>
+    </ul>
+    <ol type="A">            /* A, a , I, i, 1*/
+        <li>Harry</li>
+        <li>Rohan</li>
+        <li>Shubham</li>
+    </ol>
+
+</body>
+
+</html>

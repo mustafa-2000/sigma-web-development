@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms - Lets learn it</title>
+</head>
+
+<body>
+    <h1>Form to apply for Sigma Web Development course - TA </h1>
+    <form action="post">    
+         <!-- /* note: in here we can type Post and GET its used for backend, and most we use post method */ -->
+          <!-- easy form validation -->
+         <!-- required :that we add the end of inp, and ite means :the required attribute makes a field mandatory to fill out  -->
+         <!-- autofocus:that we add the end of inp , bc : the autofocus automatically focuse the cursor on the particular input when the page loads.-->
+          <!-- pattern : the pattern atrribute specifes a regular expression that the input must match to valid , pattern [ a-z A-Z 0-9]+  -->
+        <div>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" placeholder="Enter your username" autofocus>
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" placeholder="enter your naem" required>
+        </div>
+        <div>
+            <label for="password">Password:</label>
+            <input type="password" id="password" placeholder="enter your password" pattern="a-z A-Z 0-9">
+            
+        </div>
+        <div>            
+              <!-- /*note2: for radio we set same name bc we chose one of them male or female */ -->
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+        </div>
+
+        <div>            
+             <!-- /*note3: in checkbox we can chouse multiple choise*/ -->
+            <input type="checkbox" id="subscribe" name="subscribe" value="yes">
+            <label for="subscribe">Subscribe to newsletter</label>
+            <input type="checkbox" name="html" id="html">
+            <label for="html">Html</label>
+        </div>
+        <div>
+            <label for="comment">Enter your comment</label>
+            <br>
+            <!-- we can change the height and width of the message box by editing the rows and columns -->
+            <textarea id="comment" name="comment" rows="4" cols="50"></textarea>
+        </div>
+
+        <div>
+            <!-- note4: first we set select tag then we add multiple options and we can select one of them -->
+            <select name="fruits">
+                <option value="apple">Apple</option>
+                <option value="banana">Banana</option>
+                <option value="cherry">Cherry</option>
+          </select>
+        </div>
+        <div>
+            <input type="submit" value="submit">
+        </div>
+    </form>
+</body>
+
+</html>
