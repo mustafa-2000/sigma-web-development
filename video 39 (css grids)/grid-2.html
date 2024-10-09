@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+    <style>
+        .container {
+            /* this is second trict */
+            border: 2px solid black;
+            display: grid;
+
+            /* this is the structure  and we can set the width , and the width of nav is 3 times, side is 1 times, width of article is 2 times, and width of footer is 3 times*/
+            grid-template-areas: "nav nav nav"
+                "side article article"
+                "footer footer footer";
+        }
+
+        .item {
+            border: 2px solid red;
+            height: 55px;
+        }
+
+        .item-1 {
+            /* note we can set wich item is belong to wich area */ 
+
+            /* the area of item 1 is nav */
+            grid-area: nav;
+            background-color: aqua;
+        }
+
+        .item-2 {
+            /* the area of item-2 is side */
+            grid-area: side;
+            background-color: beige;
+        }
+
+        .item-3 {
+            /* the area of item-3 is article  */
+            grid-area: article;
+            background-color: azure;
+        }
+
+        .item-4 {
+            grid-area: footer;
+        }
+
+        .item-5 {
+            /* the area of item- is on nav it comes to fornt of item-1 both have same width 3 times  */
+            grid-area: nav;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item item-1">1</div>
+        <div class="item item-2">2</div>
+        <div class="item item-3">3</div>
+        <div class="item item-4">4</div>
+        <div class="item item-5">5</div>
+    </div>
+</body>
+
+</html>

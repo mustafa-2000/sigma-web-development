@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Transform</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            height: 50px;
+            width: 50px;
+            background-color: beige;
+            border: 2px solid black;
+
+            /* transform: rotateX('40deg'); */
+            /* note: rotate is about x axis in 3D and display in 2D*/
+
+            /* transform: rotateY('angle'); */
+            /* note: rotate is about y axis in 3D and display in 2D */
+
+            /* transform: rotateZ('angle'); */
+            /* note: rotate is about z axis in 3D and display in 2D */
+
+            /* transform: rotate3d(); */
+            /* note : rotate in 3D and display in 3D */
+
+            /* transform: translate3d(); */
+            /* transform: translate(); */
+            /* transform: translateX(); */
+            /* transform: translateY(); */
+
+            /* transform: skew(); */
+
+            /* transform: scale3d(); ..... */
+
+            /* note oder transfom property  */
+            /* transform-origin: ;
+            transform-style: ;
+            transform-box: ; */
+
+            transform: rotate(0.125turn);
+
+            /* note this is the cordanite of origin point */
+            transform-origin: -50% -50%;
+
+            /* transform: rotateZ(9deg); */
+            /* transform: skewY(34deg); */
+
+            /* note we can use multiple transfom in one line */
+            /* transform: translateY(100%) skewX(40deg) translateX(45%); */
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            margin: 55px;
+            width: 100vw;
+            height: 80vh;
+            border: 2px solid purple;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- note: we have two type of transform 2D and 3D  -->
+     <!-- note2: in 2D by transform we can big there scale , transilate , rotate -->
+      <!-- in 3d we can munoplite the object -->
+       <!-- display the demo and see the transform property  -->
+    <div class="container">
+        <div class="box">
+            box
+        </div>
+    </div>
+</body>
+
+</html>

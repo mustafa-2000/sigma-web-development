@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+    <style>
+        .container {
+            /* first trict */
+            width: 80vw;
+            height: 100vh;
+            border: 2px solid black;
+            display: grid;
+
+            /* note1: temlate means qalib or area or cell, if we dont set the heigt or width of item the width and height set according to the grid-tamplate,if we set the hight and width of item we have bothe item width height and grid-tamplate nut deferent size  */
+            
+            /*note2:this code will applay on width of cloumns  */
+            /* grid-template-columns: [pehla] 120px [doosra] 100px [t]; */
+
+            /* note3: this is the height of row  */
+            /* grid-template-rows: 100px 100px 100px; */
+
+            /* note: fr means freaction, and it divided by 3 cloumns , time frist and second cloumns have same width and the tirdth one is bigger 2 times the another two cloumns and the width set automaticlaly  */
+            /* grid-template-columns:1fr 1fr 2fr ; */
+
+            /* it means repeat cloumns 4 times min is 100px and max is 1fr */
+            /* grid-template-columns: repeat(4, minmax(100px, 1fr)); */
+            
+            grid-template-columns: repeat(4, 80px);
+            grid-template-rows: repeat(2, 80px);
+            /* gap: 34px; */
+            row-gap: 10px;
+            column-gap: 44px;
+
+            /* makes center according there cell */
+            justify-items: center;
+            align-items: center;
+
+            /* note : this code will works on container items */
+            /* align-content: ; */
+            /* justify-content: ; */
+
+            /* note: place-content:center;  makes center both container items and cell items*/
+            /* place-content: ; */
+            
+        }
+
+        .item {
+            border: 2px solid red;
+            height: 55px;
+            width: 55px;
+        }
+
+        .item-4 {
+
+            /* note4: we set ideal position for  item 4. 1 is strat point and 2 is the end point , it change the height   */
+            /* grid-row: 1/2;
+            grid-column: pehla/t; */
+        }
+
+        .item-1 {
+            /* grid-row: 1/2; */
+            /* note : it change the hight of item-1 , start point is 1 and the end is 2  */
+
+            /*note: or you can do */
+            /* grid-row-start: 1;
+            grid-row-end: 2; */
+
+            /* same thing */
+            /* note: it will change the width of item-1 strat is 1 and end point is 2 */
+            /* grid-column: 1/2; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item item-1">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item item-4">4</div>
+        <div class="item">5</div>
+    </div>
+</body>
+
+</html>
